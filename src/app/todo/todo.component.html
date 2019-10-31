@@ -1,0 +1,16 @@
+<li>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input
+        class="checkbox"
+        [checked]="todo.completed"
+        (change)="onToggle(todo.id)"
+        type="checkbox"/>
+      {{ todo.title }} <i class="input-helper"></i
+    ></label>
+  </div>
+  <i
+    (click)="onDelete(todo.id)"
+    class="remove mdi mdi-close-circle-outline"
+  ></i>
+</li>

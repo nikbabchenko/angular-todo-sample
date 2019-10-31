@@ -1,0 +1,12 @@
+<div class="add-items d-flex">
+  <input
+    type="text"
+    [(ngModel)]="msg"
+    (keydown.enter)="addTodo()"
+    class="form-control todo-list-input"
+    placeholder="What do you need to do today?"
+  />
+  <button [disabled]="isButtonDisabled"  (click)="addTodo()" class="add btn btn-primary font-weight-bold todo-list-add-btn">
+    Add
+  </button>
+</div>

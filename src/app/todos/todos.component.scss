@@ -1,0 +1,8 @@
+.list-wrapper {
+  opacity: 0.5;
+  transition: 0.3s opacity ease-in-out;
+
+  &.is-active {
+    opacity: 1;
+  }
+}

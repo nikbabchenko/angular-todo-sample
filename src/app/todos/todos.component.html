@@ -1,0 +1,15 @@
+
+<div class="list-wrapper" [class.is-active]="todoService.todos.length > 0">
+  <!-- if todoService.todos.length > 0 - render todos, else -template with templateID empty -->
+  <ul class="d-flex flex-column todo-list" *ngIf="todoService.todos.length > 0; else empty;">
+    <app-todo
+      [todo]="todo"
+      *ngFor="let todo of todoService.todos">
+    </app-todo>
+  </ul>
+</div>
+
+
+<ng-template #empty>
+  <p>No todos yet</p>
+</ng-template>
